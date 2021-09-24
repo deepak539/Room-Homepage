@@ -40,6 +40,7 @@ body {
   position: absolute;
   bottom: 0;
   right: -123px;
+  z-index: 1;
 }
 
 .homepage-top-left-navs-div {
