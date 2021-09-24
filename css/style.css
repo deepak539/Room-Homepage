@@ -1,0 +1,300 @@
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Spartan", sans-serif;
+  font-size: 0.75rem;
+}
+
+.homepage p {
+  color: #a1a1a1;
+  line-height: 1.5em;
+}
+
+.homepage-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.homepage-top-left {
+  width: 60%;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.homepage-top-left-navs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  right: -123px;
+}
+
+.homepage-top-left-navs-div {
+  background: black;
+  padding: 1em;
+  cursor: pointer;
+}
+
+.homepage-top-left-navs-div:hover {
+  background: #454545;
+}
+
+.homepage-top-left-navs-div img {
+  display: inline-block;
+  margin: 0 1em;
+}
+
+.homepage-top-left-navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  width: 430px;
+  color: white;
+  margin: 3.5em 2em;
+  font-size: 0.8rem;
+  background: none;
+}
+
+.homepage-top-left-navbar h1 {
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.homepage-top-left-navbar button {
+  display: none;
+}
+
+.homepage-top-left-navbar button img {
+  width: 25px;
+  height: 25px;
+}
+
+.homepage-top-left-navbar-list {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.homepage-top-left-navbar-list-item {
+  margin: 0.4em 1em;
+  cursor: pointer;
+  position: relative;
+}
+
+.homepage-top-left-navbar-list-item::after {
+  content: "";
+  width: 50%;
+  height: 2.5px;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  background: white;
+  opacity: 0;
+}
+
+.homepage-top-left-navbar-list-item:hover::after {
+  opacity: 1;
+}
+
+.homepage-top-right {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 4em;
+}
+
+.homepage-top-right-heading {
+  font-size: 2rem;
+}
+
+.homepage-top-right-para {
+  margin-top: 2em;
+}
+
+.homepage-top-right-link {
+  color: black;
+  margin-top: 3em;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.7ch;
+  font-size: 0.5rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.homepage-top-right-link img {
+  display: inline-block;
+  margin: -0.2em 2em;
+  width: 30px;
+}
+
+.homepage-down {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.homepage-down img {
+  width: 33.3%;
+}
+
+.homepage-down-middle {
+  width: 33.3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 2.6em;
+}
+
+.homepage-down-middle-heading {
+  letter-spacing: 0.4ch;
+  text-transform: uppercase;
+  font-size: 0.6rem;
+  font-weight: 700;
+}
+
+.homepage-down-middle-para {
+  margin-top: 1em;
+  font-size: 0.7rem;
+}
+
+@media (max-width: 800px) {
+  .homepage-top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .homepage-top-left {
+    width: 100%;
+    background-position: bottom;
+  }
+  .homepage-top-left-navs {
+    right: 0;
+  }
+  .homepage-top-left-navbar {
+    width: 100%;
+    height: 85px;
+    background: transparent;
+    position: relative;
+    top: 0;
+    margin: 0;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .homepage-top-left-navbar h1 {
+    left: 50%;
+    top: 35px;
+    position: absolute;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+  }
+  .homepage-top-left-navbar button {
+    display: block;
+    border: none;
+    background: transparent;
+    position: absolute;
+    top: 33px;
+    left: 50px;
+  }
+  .homepage-top-left-navbar button img {
+    width: 15px;
+    height: 15px;
+  }
+  .homepage-top-left-navbar-list {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    display: none;
+    color: black;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  .homepage-top-right {
+    width: 100%;
+    padding: 4em;
+  }
+  .homepage-top-right-heading {
+    font-size: 1.5rem;
+  }
+  .homepage-top-right-para {
+    margin-top: 1.5em;
+  }
+  .homepage-top-right-link {
+    margin-top: 4em;
+  }
+  .homepage-top-right-link img {
+    margin: -0.5em 2em;
+  }
+  .homepage-down {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .homepage-down img {
+    width: 100%;
+  }
+  .homepage-down-middle {
+    padding: 3em;
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .homepage-top-left {
+    background-position: center;
+  }
+  .homepage-top-left-navbar button {
+    top: 34.5px;
+    left: 15px;
+  }
+  .homepage-top-left-navbar-list {
+    font-size: 0.8rem;
+    top: 33px;
+  }
+}
+
+@media (max-width: 290px) {
+  .homepage-top-left-navbar button {
+    top: 35px;
+    left: 5px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
